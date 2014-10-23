@@ -1,0 +1,14 @@
+public class Tobacco {
+
+	private double price;
+	
+	Tobacco(double item) {
+		
+		price = item;
+	}
+	
+	public double getPrice() {
+		
+		return price;
+	}
+}

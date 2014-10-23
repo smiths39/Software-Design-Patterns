@@ -1,0 +1,14 @@
+public class Liquor {
+
+	private double price;
+	
+	Liquor(double item) {
+		
+		price = item;
+	}
+	
+	public double getPrice() {
+		
+		return price;
+	}
+}

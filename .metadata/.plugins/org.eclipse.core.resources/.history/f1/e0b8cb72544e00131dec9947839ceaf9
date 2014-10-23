@@ -1,0 +1,42 @@
+import java.text.DecimalFormat;
+
+/* 
+ * Concrete Visitor Class
+ */
+public class TaxVisitor implements Visitor {
+
+	/*
+	 * This formats the item prices to 2 decimal places
+	 */
+	DecimalFormat df = new DecimalFormat("#.##");
+	
+	/*
+	 * This is created so that each item is sent to the right version of visit() which is required by the Visitor interface and defined below
+	 */
+	public TaxVisitor() { 
+	
+	}
+	
+	/*
+	 * Calculates total price based on this being taxed as a liquor item(non-Javadoc)
+	 */
+	public double visit(Liquor liquorItem) {
+		
+		System.out.println("Liquor item: Price with Tax");
+
+		return Double.parseDouble(df.format((liquorItem.getPrice() * .18) + liquorItem.getPrice()));
+	}
+
+	public double visit(Tobacco tobaccoItem) {
+
+		System.out.println("Tobacco item: Price with Tax");
+		return Double.parseDouble(df.format((tobaccoItem.getPrice() * .32) + tobaccoItem.getPrice()));
+
+	}
+
+	public double visit(Necessity necessityItem) {
+	
+		System.out.println("Necessity item: Price with Tax");
+		return Double.parseDouble(df.format((necessityItem.getPrice() * 0) + necessityItem.getPrice()));
+	}
+}

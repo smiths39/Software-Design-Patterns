@@ -1,0 +1,22 @@
+public class Gallons extends Expression {
+
+	public String gallons(double quantity) {
+
+	}
+
+	public String quarts(double quantity) {
+	
+	}
+
+	public String pints(double quantity) {
+	
+	}
+
+	public String cups(double quantity) {
+
+	}
+
+	public String tablespoons(double quantity) {
+	
+	}
+}

@@ -1,0 +1,19 @@
+import java.lang.reflect.*;
+import javax.swing.*;
+
+public class MeasurementsConversion {
+
+	public static void main(String [] args) {
+
+		JFrame frame = new JFrame();
+		String questionAsked = JOptionPane.showInputDialog(frame, "What is your Question");
+		
+		ConversionContext question = new ConversionContext(questionAsked);
+	
+		String fromConversion = question.getFromConversion();
+		String toConversion = question.getToConversion();
+		double quantity = question.getQuantity();
+		
+		Class tempClass = Class.forName(fromConversion);
+	}
+}
